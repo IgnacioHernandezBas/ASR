@@ -32,6 +32,13 @@
 Por otro lado si se trata de acceder desde el propio equipo del usuario, la conexión no es admitida.
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/504ee781-d6ed-45cb-a289-bffac36f3d87)
 
+## Parte 2
+
+Creación certificado
+
+![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/073c93e5-4910-4235-b467-c03689da5322)
+
+
 
 
 
