@@ -1,26 +1,32 @@
 # ASR-02
 
 # 1a Solución: creación de máquina de salto - 4 puntos
+
 + Montar una máquina de salto para poder acceder a nuestro servidor web. Esta máquina se debería encender y apagar cada vez que se quiera modificar algo del servidor web.
 + Exponer únicamente en ambos servidores lo mínimo indispensable con reglas de firewall (firewall capa 4).
 
 ## Creación de las Vm Instances (Máquina de salto y Servidor Web):
+
 + Servidor Web
+
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/e2e3a637-970d-4997-852a-9e0b874da864)
 
 
 + Jump Server
+  
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/65a1d845-7a4f-48ed-a97b-2840c8ad6adf)
 
 
 ## Creación de las reglas de firewall para ambas instancias
 
 + Servidor Web
+  
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/f4acc4e4-6dab-4c7c-b891-732eeec0e909)
 
 
 
 + Jump Server
+  
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/1df93d91-4f0f-45b7-9611-6baf5ebd31dd)
 
 ## Comprobación de acceso a las instancias
@@ -68,10 +74,15 @@ Es necesario habilitar la **cloud NAT** para poder llevar a cabo la instalación
 
 ## Proteger nuestra máquina de ataques SQL Injection, Cross Syte Scripting y restringir el tráfico sólo a paises de confianza de la UE implantando un WAF a nuestro balanceador.
 
-Para llevar a cabo esta tarea se han establecido las siguientes reglas en el apartado de **cloud armor** perteneciente al load balancer
+Para llevar a cabo esta tarea se han establecido las siguientes reglas en el apartado de **cloud armor** perteneciente al load balancer.
 
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/cbbb8552-63b9-4119-afc2-f77dfd8001e0)
 
+## Acceso a Nginx del servidor web a partir del load balancer
+
+Para acceder al servidor web, al no tener IP pública, es necesario acceder a partir de la dirección load balancer desde el navegador.
+
+![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/e8c5a2e9-edda-4c65-85cd-50eda3644a97)
 
 
 ## 3ra mejora solución: zero trust - 1 punto
