@@ -49,7 +49,7 @@ Acceso web a NginX
 
 
 
-# 2da mejora solución: introducción a los WAF - Web Application Firewall (firewall capa 7) - 4 puntos
+# 2da Solución: introducción a los WAF - Web Application Firewall (firewall capa 7) - 4 puntos
 
 ## Convertir nuestro servidor web para que no tenga ip pública
 
@@ -81,7 +81,7 @@ Acceso web a NginX
 
 ## ¿Qué ventajas e incovenientes tiene hacer https offloading en el balanceador?
 
-Emplear https offloading libera carga y recursos necesarios en los servidores debido a que el balancer s eencarga del proceso de cifrado y descifrado aliviando esta tarea a las instancias. A costa de esto, la red interna es menos segura al no estar cifrada la información al traspasar el load balancer. 
+Emplear https offloading libera carga y recursos necesarios en los servidores debido a que el balancer se encarga del proceso de cifrado y descifrado aliviando esta tarea a las instancias. A costa de esto, la red interna es menos segura al no estar cifrada la información al traspasar el load balancer. 
 
 
 ## ¿Qué pasos adicionales has tenido que hacer para que la máquina pueda salir a internet para poder instalar el servidor nginx?
@@ -104,11 +104,16 @@ Para acceder al servidor web, al no tener IP pública, es necesario acceder a pa
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/e8c5a2e9-edda-4c65-85cd-50eda3644a97)
 
 
-## 3ra mejora solución: zero trust - 1 punto
-- Cifrar el contenido web también dentro del cloud y quitar el HTTPS offloading.
 
-## 4ta mejora solución - 1 punto
-¿Qué otras mejoras se te ocurrirían para mejorar la seguridad o disponibilidad del servidor web? (No hace falta implementarlas)
+# 4ta Solución - 1 punto
+
+## ¿Qué otras mejoras se te ocurrirían para mejorar la seguridad o disponibilidad del servidor web? (No hace falta implementarlas)
+
+
+Para mejorar la **disponibilidad** del servidor web se puede establecer un sistema automático de recuperación ante posibles incidentes y brechas de seguridad que permita mitigar las concecuencias y recuperarse ante dichos ataques. El establecimiento de CDNs (Content Delivery Networks) permitiría la entrega de contenido de forma mucho más veloz. También sería necesario establecer medidas ante posibles desatres naturales o incidentes que pudieran causar la interrupción del servicio, generadores de emergencia y redundancias entre los elementos de la red mantendrían la disponibilidad de la red ante estos sucesos.
+
+En el caso de querer mejorar la **seguridad** se puede configurar un servicio de autenticación multifactor, el cual permita mejorar la seguridad de las conexiones y cuentas de los usuarios que hagan uso de la red. La creación de Honeypots permite detectar y atraer amenazas y atacantes de forma activa.
+
 
 
 
