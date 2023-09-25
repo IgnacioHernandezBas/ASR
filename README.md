@@ -43,11 +43,11 @@ Se puede acceder a este mediante el jump server (SSH).
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/df6ddaea-5da7-47a6-b016-58c92eb3ac02)
 
 Acceso web a NginX
+
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/a0fd8a1f-a1af-4040-9afd-624e7f909778)
 
 
 
-![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/504ee781-d6ed-45cb-a289-bffac36f3d87)
 
 # 2da mejora solución: introducción a los WAF - Web Application Firewall (firewall capa 7) - 4 puntos
 
@@ -59,6 +59,25 @@ Acceso web a NginX
 ## Montar un balanceador con servicio de WAF haciendo HTTPS offloading.
 
   ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/062c47b9-0324-4809-873e-e6c16f4d54c6)
+
+  + Creación certificado
+
+    ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/c9426edb-df9a-4eeb-b8a3-85fa2f4b1b07)
+
+
+  + Healthcheck
+
+    ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/ccac88b0-4561-448d-9fdd-8442da1a7fd4)
+
+  + Backend
+
+    ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/9ae23729-e352-439d-a526-ede8e97d7fd4)
+
+
+
+    
+
+  
 
 ## ¿Qué ventajas e incovenientes tiene hacer https offloading en el balanceador?
 
