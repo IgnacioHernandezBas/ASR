@@ -14,6 +14,7 @@
 
 
 ## Creación de las reglas de firewall para ambas instancias
+
 + Servidor Web
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/f4acc4e4-6dab-4c7c-b891-732eeec0e909)
 
@@ -22,20 +23,22 @@
 + Jump Server
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/1df93d91-4f0f-45b7-9611-6baf5ebd31dd)
 
-## Comprobación de acceso por SSH a las instancias
+## Comprobación de acceso a las instancias
 
-+Jump Server:
++Jump Server (SSH):
 
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/dabdd1f5-528c-4f3b-a7bc-82e645f311f0)
 
 
 +Servidor Web: 
 
-Se puede acceder a este mediante el jump server.
+Se puede acceder a este mediante el jump server (SSH).
 
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/df6ddaea-5da7-47a6-b016-58c92eb3ac02)
 
 Acceso web a NginX
+![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/a0fd8a1f-a1af-4040-9afd-624e7f909778)
+
 
 
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/504ee781-d6ed-45cb-a289-bffac36f3d87)
@@ -50,9 +53,6 @@ Acceso web a NginX
 ## Montar un balanceador con servicio de WAF haciendo HTTPS offloading.
 
   ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/062c47b9-0324-4809-873e-e6c16f4d54c6)
-
-
-
 
 ## ¿Qué ventajas e incovenientes tiene hacer https offloading en el balanceador?
 
