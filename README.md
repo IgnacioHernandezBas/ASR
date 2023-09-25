@@ -32,11 +32,45 @@
 Por otro lado si se trata de acceder desde el propio equipo del usuario, la conexión no es admitida.
 ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/504ee781-d6ed-45cb-a289-bffac36f3d87)
 
-## Parte 2
+## 2da mejora solución: introducción a los WAF - Web Application Firewall (firewall capa 7) - 4 puntos
++ Convertir nuestro servidor web para que no tenga ip pública
 
-Creación certificado
+  ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/8c3656b5-cbf9-4ddb-863d-0215378a74ef)
 
-![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/073c93e5-4910-4235-b467-c03689da5322)
+
++ Montar un balanceador con servicio de WAF haciendo HTTPS offloading.
+
+  ![image](https://github.com/IgnacioHernandezBas/ASR/assets/91118338/062c47b9-0324-4809-873e-e6c16f4d54c6)
+
+
+
+
++¿Qué ventajas e incovenientes tiene hacer https offloading en el balanceador?
+
+Emplear Https offloading libera la carga y recursos necesarios para el proceso de cifrado y descifrado por parte de las instancias. A costa de esto la red interna es menos segura al no estar cifrada la información al traspasar el load balancer. 
+
+
+
+
+
++ ¿Qué pasos adicionales has tenido que hacer para que la máquina pueda salir a internet para poder instalar el servidor nginx?
+
+
+
+
+
+
+
+
++ Proteger nuestra máquina de ataques SQL Injection, Cross Syte Scripting y restringir el tráfico sólo a paises de confianza de la UE implantando un WAF a nuestro balanceador.
+
+## 3ra mejora solución: zero trust - 1 punto
+- Cifrar el contenido web también dentro del cloud y quitar el HTTPS offloading.
+
+## 4ta mejora solución - 1 punto
+¿Qué otras mejoras se te ocurrirían para mejorar la seguridad o disponibilidad del servidor web? (No hace falta implementarlas)
+
+
 
 
 
